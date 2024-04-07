@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/summy/Desktop/Centennial Courses/Semester 2/COMP 123/Labs/Lab_8/Lab_8.csproj": {}
+    "C:\\Users\\DARD_\\OneDrive\\Documentos\\Centennial\\Semester 2\\Programming 2\\project\\Accounts-Programming2\\Lab_8.csproj": {}
   },
   "projects": {
-    "/Users/summy/Desktop/Centennial Courses/Semester 2/COMP 123/Labs/Lab_8/Lab_8.csproj": {
+    "C:\\Users\\DARD_\\OneDrive\\Documentos\\Centennial\\Semester 2\\Programming 2\\project\\Accounts-Programming2\\Lab_8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/summy/Desktop/Centennial Courses/Semester 2/COMP 123/Labs/Lab_8/Lab_8.csproj",
+        "projectUniqueName": "C:\\Users\\DARD_\\OneDrive\\Documentos\\Centennial\\Semester 2\\Programming 2\\project\\Accounts-Programming2\\Lab_8.csproj",
         "projectName": "Lab_8",
-        "projectPath": "/Users/summy/Desktop/Centennial Courses/Semester 2/COMP 123/Labs/Lab_8/Lab_8.csproj",
-        "packagesPath": "/Users/summy/.nuget/packages/",
-        "outputPath": "/Users/summy/Desktop/Centennial Courses/Semester 2/COMP 123/Labs/Lab_8/obj/",
+        "projectPath": "C:\\Users\\DARD_\\OneDrive\\Documentos\\Centennial\\Semester 2\\Programming 2\\project\\Accounts-Programming2\\Lab_8.csproj",
+        "packagesPath": "C:\\Users\\DARD_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DARD_\\OneDrive\\Documentos\\Centennial\\Semester 2\\Programming 2\\project\\Accounts-Programming2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/summy/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\DARD_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -58,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

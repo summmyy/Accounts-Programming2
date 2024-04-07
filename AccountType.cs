@@ -1,6 +1,6 @@
-enum AccountType
+public enum AccountType
 {
     Checking,
-    Savings,
+    Saving,
     Visa,
 }
