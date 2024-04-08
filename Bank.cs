@@ -1,4 +1,4 @@
-static class Bank{
+public static class Bank{
     public static readonly Dictionary<string, Account> ACCOUNTS = new Dictionary<string, Account>();
     public static readonly Dictionary<string, Person> USERS = new Dictionary<string, Person>();
 
@@ -55,14 +55,14 @@ static class Bank{
     }
 
         public static void PrintAccounts(){
-            foreach(var account in ACCOUNTS.Values){
-                Console.WriteLine(account.ToString());
+            foreach(Account account in ACCOUNTS.Values){
+                Console.WriteLine($"[{account}]");
             }
         }
 
         public static void PrintPersons(){
-            foreach(var person in USERS.Values){
-                Console.WriteLine(person.ToString());
+            foreach(Person person in USERS.Values){
+                Console.WriteLine($"[{person} {(person.IsAuthenticated ? "Logged in": "Not logged in")}]");
             }
         }
 
@@ -90,6 +90,18 @@ static class Bank{
             }
         }
 
+        public static List<Transaction> GetAllTransactions(){
+            List<Transaction> transactions = new List<Transaction>();
+            foreach (var keyValuePair in ACCOUNTS)
+            {
+                foreach (Transaction transaction in keyValuePair.Value.transactions)
+                {
+                    transactions.Add(transaction);   
+                }            
+            }
+            return transactions;
+        }
+
         public static void AddPerson(string name, string sin)
         {
             Person person = new Person(name, sin);
@@ -105,15 +117,6 @@ static class Bank{
 
         public static void AddUserToAccount(string number, string name)
         {
-            if (ACCOUNTS.ContainsKey(number) && USERS.ContainsKey(name))
-            {
-                Account account = ACCOUNTS[number];
-                Person person = USERS[name];
-                account.AddUser(person);
-            }
-            else
-            {
-                throw new AccountException(ExceptionType.USER_DOES_NOT_EXIST);
-            }
+            ACCOUNTS[number].AddUser(USERS[name]);
         }
     }

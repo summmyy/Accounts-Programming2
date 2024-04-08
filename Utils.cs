@@ -3,17 +3,17 @@ public static class Utils {
     static Random random = new Random();
     public static DayTime Time
     {
-    get => _time += random.Next(1000);
+        get => _time += random.Next(10000);
     }
     public static DayTime Now
     {
-    get => _time += 0;
+        get => _time += 0;
     }
     public readonly static Dictionary<AccountType, string> ACCOUNT_TYPES =
     new Dictionary<AccountType, string>
     {
-    { AccountType.Checking , "CK" },
-    { AccountType.Saving , "SV" },
-    { AccountType.Visa , "VS" }
+        { AccountType.Checking , "CK" },
+        { AccountType.Saving , "SV" },
+        { AccountType.Visa , "VS" }
     };
 }

@@ -1,4 +1,4 @@
-class Person
+public class Person
 {
     private string Password;
     public event EventHandler OnLogin;
@@ -21,11 +21,8 @@ class Person
             OnLogin?.Invoke(this, new LoginEventArgs(Name, false));
             throw new AccountException(ExceptionType.PASSWORD_INCORRECT);
         }
-        else
-        {
-            IsAuthenticated = true;
-            OnLogin?.Invoke(this, new LoginEventArgs(Name, true));
-        }
+        IsAuthenticated = true;
+        OnLogin?.Invoke(this, new LoginEventArgs(Name, true));
     }
     public void Logout()
     {
@@ -33,7 +30,7 @@ class Person
     }
     public override string ToString()
     {
-        return $"{Name} - Authenticated: {IsAuthenticated}";
+        return $"{Name}";
     }
 }
 

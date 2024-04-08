@@ -1,4 +1,4 @@
-struct DayTime{
+public struct DayTime{
     private long Minutes;
 
     public DayTime(long minutes){
@@ -12,12 +12,12 @@ struct DayTime{
 
     public override string ToString()
     {
-        int year = (int)(Minutes / (60 * 24 * 365));
-        int month = (int)((Minutes % (60 * 24 * 365)) / (60 * 24 * 30));
-        int day = (int)(((Minutes % (60 * 24 * 365)) % (60 * 24 * 30)) / (60 * 24));
-        int hour = (int)((((Minutes % (60 * 24 * 365)) % (60 * 24 * 30)) % (60 * 24)) / 60);
-        int remainingMinutes = (int)((((Minutes % (60 * 24 * 365)) % (60 * 24 * 30)) % (60 * 24)) % 60);
-
-        return $"{year} years, {month} months, {day} days, {hour} hours, {remainingMinutes} minutes";
+        double year, month, day, hour, min;
+        year = (double)Minutes / 518400;
+        month = (year - Math.Floor(year)) * 12;
+        day = (month - Math.Floor(month)) * 30 ;
+        hour = (day - Math.Floor(day)) * 24 ;
+        min = (hour - Math.Floor(hour) ) * 60; 
+        return $"{(int)year}-{(int)month:d2}-{(int)day:d2} {(int)hour:d2}:{(int)min:d2}";
     }
 }

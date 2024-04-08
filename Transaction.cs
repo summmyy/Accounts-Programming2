@@ -1,4 +1,4 @@
-struct Transaction
+public struct Transaction
 {
     public string AccountNumber { get; }
     public double Amount { get; }
@@ -15,12 +15,7 @@ struct Transaction
 
     public override string ToString()
     {
-        string transactionType = Amount >= 0 ? "Deposit" : "Withdraw";
-        return $"Account Number: {AccountNumber}\n" +
-               $"Person: {Originator.Name}\n" +
-               $"Amount: {Amount}\n" +
-               $"Time: {Time}\n" +
-               $"Transaction Type: {transactionType}";
+        return $"{AccountNumber} {Math.Abs(Amount):c2} {(Amount > 0 ? "deposited" : "withdrawn")} by {Originator.Name} on {Time}";
     }
 
 }
